@@ -1,9 +1,22 @@
 import { Boards } from '@/data';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 interface BoardPageProps {
   params: {
     boardId: string;
+  };
+  searchParams?: {
+    [key: string]: string | string[] | undefined;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: BoardPageProps): Promise<Metadata> {
+  const board = Boards.find((b) => b?.id === params.boardId);
+  return {
+    title: board?.title || 'Board not found',
   };
 }
 
