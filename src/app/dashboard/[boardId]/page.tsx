@@ -1,7 +1,13 @@
 import { Boards } from '@/data';
 import { notFound } from 'next/navigation';
 
-export default function BoardPage({ params }: { params: { boardId: string } }) {
+interface BoardPageProps {
+  params: {
+    boardId: string;
+  };
+}
+
+export default function BoardPage({ params }: BoardPageProps) {
   const board = Boards.find((b) => b?.id === params.boardId);
 
   if (!board) return notFound();
