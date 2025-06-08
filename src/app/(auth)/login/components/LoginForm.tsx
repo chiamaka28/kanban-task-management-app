@@ -1,6 +1,6 @@
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+// import { useForm } from 'react-hook-form';
+// import { yupResolver } from '@hookform/resolvers/yup';
+// import * as yup from 'yup';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button/Button';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
-import * as yup from 'yup';
+// import * as yup from 'yup';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button/Button';
 import { Checkbox } from '@/components/ui/checkbox/Checkbox';
